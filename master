@@ -1,0 +1,35 @@
+# ClockFunction
+44th program on c
+
+#include<stdio.h>
+#include<dos.h>
+            
+
+#include<time.h>            //header file for clock functions
+
+int  main()
+{
+                    //main START
+
+   int clock_t, time1, time2;        /*to define data types storing clock
+                      time*/
+
+    int CLK_TCK;          
+
+    printf("START TIME: ");        
+
+    time1=clock()/CLK_TCK;        /*to store initial clock time, CLK_TCK
+                      constant, number of ticks per sec*/
+        
+    printf("%d", time1);        //display initial clock time    
+    
+    delay(2000);            //delay execution of program by 2 sec
+    printf("\nEND TIME: ");        
+
+    time2=clock()/CLK_TCK;        //to store final clock time
+
+    printf("%d",time2);        //display final clock time
+
+    return (0);          //to freeze the output screen
+
+}    
